@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: 'adicionar-posts',
     loadChildren: () => import('./adicionar-posts/adicionar-posts.module').then( m => m.AdicionarPostsPageModule)
-  }
+  },
 ];
 
 @NgModule({

@@ -9,12 +9,12 @@ import { AdicionarPostsPageRoutingModule } from './adicionar-posts-routing.modul
 import { AdicionarPostsPage } from './adicionar-posts.page';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AdicionarPostsPageRoutingModule
-  ],
-  declarations: [AdicionarPostsPage]
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        AdicionarPostsPageRoutingModule
+    ],
+    declarations: [AdicionarPostsPage]
 })
-export class AdicionarPostsPageModule {}
+export class AdicionarPostsPageModule { }

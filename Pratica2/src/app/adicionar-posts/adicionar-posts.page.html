@@ -1,9 +1,30 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>adicionarPosts</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Adicionar Posts</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <form #form="ngForm" (ngSubmit)=" logForm(form)" novalidate>
+        <ion-item>
+            <ion-label>Preencha, a seguir, os Dados do Post</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="User ID" name="userId" [(ngModel)]="form.userId"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="ID" name="id" [(ngModel)]="form.id"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-input placeholder="Titulo do post" name="title" [(ngModel)]="form.title"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-textarea placeholder="Insira o conteudo do post" name="body" [(ngModel)]="form.body"></ion-textarea>
+        </ion-item>
+        <ion-button expand="full" type="submit">Adicionar Post</ion-button>
+    </form>
 
-</ion-content>
+  

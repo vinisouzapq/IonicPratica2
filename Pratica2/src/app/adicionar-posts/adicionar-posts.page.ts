@@ -1,15 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import * as core from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
-@Component({
-  selector: 'app-adicionar-posts',
-  templateUrl: './adicionar-posts.page.html',
-  styleUrls: ['./adicionar-posts.page.scss'],
+@core.Component({
+    selector: 'app-adicionar-posts',
+    templateUrl: './adicionar-posts.page.html',
+    styleUrls: ['./adicionar-posts.page.scss'],
 })
-export class AdicionarPostsPage implements OnInit {
+export class AdicionarPostsPage implements core.OnInit {
 
-  constructor() { }
 
-  ngOnInit() {
-  }
+    constructor() {
+    }
 
+    ngOnInit() {
+    }
+
+    forms = {
+        userId: '',
+        id: '',
+        title: '',
+        body: ''
+}
+
+    logForm(form) {
+        console.log(form.value);
+    }
 }

@@ -20,7 +20,12 @@ export class AppComponent implements OnInit {
     {
       title: 'Posts',
       url: '/posts',
-        icon: 'folder'
+      icon: 'folder'
+      },
+    {
+      title: 'Adicionar Posts',
+        url: '/adicionar-posts',
+      icon: 'folder'
     },
   ];
 

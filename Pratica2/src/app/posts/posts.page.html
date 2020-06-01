@@ -8,5 +8,30 @@
 </ion-header>
 
 <ion-content>
+    <ion-grid>
+        <ion-row>
+            <ion-col>
+                <ion-card *ngFor="let posts of postsPage">
+                        <ion-card-header>
+                            <ion-card-title>{{posts.title}}</ion-card-title>
+                        </ion-card-header>
 
+                        <ion-card-content>
+                            {{posts.body}}
+                        </ion-card-content>
+                </ion-card>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <ion-fab vertical="bottom" horizontal="end" [routerLink]="['/adicionar-posts']" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
 </ion-content>
